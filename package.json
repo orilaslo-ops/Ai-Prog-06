@@ -1,0 +1,22 @@
+{
+  "name": "lab06-explainer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lab 6 explainer video (Remotion + Kokoro narration)",
+  "scripts": {
+    "studio": "remotion studio",
+    "narrate": "python3 narration/tts.py",
+    "render:test": "remotion render TestClip out/test-clip.mp4",
+    "render": "remotion render Explainer out/explainer.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.543",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
