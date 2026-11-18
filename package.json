@@ -7,6 +7,7 @@
     "studio": "remotion studio",
     "narrate": "python3 narration/tts.py",
     "render:test": "remotion render TestClip out/test-clip.mp4",
+    "render:scene1": "remotion render Scene01Intro",
     "render": "remotion render Explainer out/explainer.mp4"
   },
   "dependencies": {
