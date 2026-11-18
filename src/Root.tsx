@@ -1,6 +1,7 @@
 import { Composition, Series } from "remotion";
 import { SCENES } from "./scenes";
 import { FPS, HEIGHT, WIDTH } from "./scenes/theme";
+import { SLOW, SlowMo } from "./SlowMo";
 import { TestClip } from "./TestClip";
 
 export { FPS };
@@ -11,8 +12,13 @@ const TOTAL = SCENES.reduce((sum, s) => sum + s.seconds, 0);
 const Explainer: React.FC = () => (
   <Series>
     {SCENES.map((s) => (
-      <Series.Sequence key={s.id} durationInFrames={s.seconds * FPS}>
-        <s.component />
+      <Series.Sequence
+        key={s.id}
+        durationInFrames={Math.round(s.seconds * FPS * SLOW)}
+      >
+        <SlowMo durationInFrames={s.seconds * FPS}>
+          <s.component />
+        </SlowMo>
       </Series.Sequence>
     ))}
   </Series>
@@ -33,7 +39,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Explainer"
         component={Explainer}
-        durationInFrames={TOTAL * FPS}
+        durationInFrames={Math.round(TOTAL * FPS * SLOW)}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
