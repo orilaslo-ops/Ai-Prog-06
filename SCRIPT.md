@@ -97,3 +97,28 @@ data by looking at just one hash."
 - Scene 6 is the key idea; if time runs short, cut scene 7 rather than scene 6.
 - Show real hash values (`3f9a…`) or labels (`h12`)? Plan: real-looking codes in scene 3,
   labels in scenes 4–6 so the tree stays readable.
+
+---
+
+# Version 2: "Neon city" (branch `claude/neon-city`)
+
+Same narration and timing as version 1 (it reuses `public/scene01.wav` … `scene07.wav`),
+new visuals in `src/v2/`, played by the `ExplainerV2` composition. Version 1 stays
+untouched as the fallback.
+
+**World:** a 3D isometric neon city at night over an endless synthwave grid. Files are
+cyan towers, hashes are magenta light bridges and floating hubs, the Merkle root is a gold
+beacon with a light pillar into the sky, a change is hot red, a match is green. The
+camera flies: dives, cranes up, follows light surges. Shared pieces are in
+`src/v2/kit.tsx` (`NeonBackground`, `Tower`, `Hub`, `Beam`, `Beacon`, `iso()` and the
+tree layout); the `KitPreview` composition shows the finished tree.
+
+| # | Scene file | Idea |
+|---|------------|------|
+| 1 | `V2Scene01Hook.tsx` | Dive from the sky into an endless city; one window flickers red and is lost; a searchlight halves the city 20 times; the title switches on like a neon sign. |
+| 2 | `V2Scene02Problem.tsx` | Two cities (you, a friend) far apart; files crawl one by one along a highway of light; a billboard counter; "forever" buzzes on. |
+| 3 | `V2Scene03Fingerprint.tsx` | A tower passes through a scanning hash gate and a holographic hex code appears; one letter flips with a glitch and the code changes completely. |
+| 4 | `V2Scene04Grow.tsx` | Towers rise out of the grid, bridges shoot up joining pairs into hubs, the camera cranes up as the gold beacon ignites. |
+| 5 | `V2Scene05Change.tsx` | One tower glitches red; a red surge races along the bridges to the beacon, which turns red. |
+| 6 | `V2Scene06Find.tsx` | Two cities side by side; a scanner drone compares beacons, then dives only into the district that differs, down to the one tower. |
+| 7 | `V2Scene07Uses.tsx` | Three districts with neon signs (Git, Bitcoin, sync); their beacons merge into one giant beacon; the title. |
