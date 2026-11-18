@@ -8,7 +8,7 @@
     "narrate": "python3 narration/tts.py",
     "render:test": "remotion render TestClip out/test-clip.mp4",
     "render:scene1": "remotion render Scene01Intro",
-    "render": "remotion render Explainer out/explainer.mp4"
+    "render": "remotion render Explainer"
   },
   "dependencies": {
     "@remotion/cli": "4.0.543",
