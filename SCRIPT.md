@@ -21,15 +21,6 @@ Lengths live in `src/scenes/index.ts`; colours and fonts in `src/scenes/theme.ts
 Each scene plays its own narration file `public/sceneNN.wav` (for example `scene03.wav`),
 made with `.venv/bin/python narration/tts.py "<text>" public/sceneNN.wav`.
 
----|------------|------|---------|
-| 1 | `Scene01Intro.tsx` | 0:00–0:05 | 5 |
-| 2 | `Scene02Problem.tsx` | 0:05–0:13 | 8 |
-| 3 | `Scene03Fingerprint.tsx` | 0:13–0:22 | 9 |
-| 4 | `Scene04Build.tsx` | 0:22–0:34 | 12 |
-| 5 | `Scene05Change.tsx` | 0:34–0:44 | 10 |
-| 6 | `Scene06Find.tsx` | 0:44–0:54 | 10 |
-| 7 | `Scene07Uses.tsx` | 0:54–1:02 | 8 |
-
 ---
 
 ## Scene 1 — Hook
