@@ -9,6 +9,19 @@ total (Kokoro, voice `af_heart`, reads about 2.5 words a second).
 
 | # | Scene file | Time | Seconds |
 |---|------------|------|---------|
+| 1 | `Scene01Intro.tsx` | 0:00–0:08 | 8 |
+| 2 | `Scene02Problem.tsx` | 0:08–0:16 | 8 |
+| 3 | `Scene03Fingerprint.tsx` | 0:16–0:25 | 9 |
+| 4 | `Scene04Build.tsx` | 0:25–0:37 | 12 |
+| 5 | `Scene05Change.tsx` | 0:37–0:47 | 10 |
+| 6 | `Scene06Find.tsx` | 0:47–0:58 | 11 |
+| 7 | `Scene07Uses.tsx` | 0:58–1:07 | 9 |
+
+Lengths live in `src/scenes/index.ts`; colours and fonts in `src/scenes/theme.ts`.
+Each scene plays its own narration file `public/sceneNN.wav` (for example `scene03.wav`),
+made with `.venv/bin/python narration/tts.py "<text>" public/sceneNN.wav`.
+
+---|------------|------|---------|
 | 1 | `Scene01Intro.tsx` | 0:00–0:05 | 5 |
 | 2 | `Scene02Problem.tsx` | 0:05–0:13 | 8 |
 | 3 | `Scene03Fingerprint.tsx` | 0:13–0:22 | 9 |
@@ -19,12 +32,16 @@ total (Kokoro, voice `af_heart`, reads about 2.5 words a second).
 
 ---
 
-## Scene 1 — Intro (done)
+## Scene 1 — Hook
 
-**Shows:** title "Merkle tree". Eight files appear, hashes join in pairs level by level,
-and the root hash lights up yellow.
+**Shows:** open on a huge wall of tiny grey squares (thousands, drawn in code) while the
+camera slowly zooms out, so it feels endless; label "1,000,000 files". One square
+somewhere flashes red for a moment, then is lost in the crowd again. A big "?" appears,
+then a counter "20 steps". Last second: everything fades back and the title
+"Merkle tree" lands, with a small yellow root node under it.
 
-**Narration:** "A Merkle tree fingerprints a million files with one hash at the top."
+**Narration:** "One letter changed, somewhere in a million files. Could you find it in
+just twenty steps? A Merkle tree can."
 
 ## Scene 2 — The problem
 
